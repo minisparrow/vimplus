@@ -170,11 +170,13 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'vim-scripts/VimCompletesMe'
 Plug 'liuchengxu/vista.vim'
-" Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 
 
 Plug 'voldikss/vim-floaterm'
 Plug 'windwp/vim-floaterm-repl'
+
+Plug 'tmux-plugins/vim-tmux'
 
 
 " 加载自定义插件
