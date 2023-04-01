@@ -175,8 +175,12 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'voldikss/vim-floaterm'
 Plug 'windwp/vim-floaterm-repl'
-
 Plug 'tmux-plugins/vim-tmux'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf.vim'
+
+Plug 'neoclide/coc.nvim'
+Plug 'weirongxu/coc-explorer'
 
 
 " 加载自定义插件
@@ -245,7 +249,7 @@ let g:airline_left_alt_sep = ' '
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = ' '
 
-let g:Lf_WindowPosition = 'popup'
+" let g:Lf_WindowPosition = 'popup'
 
 " cpp-mode
 nnoremap <leader>y :CopyCode<cr>
@@ -465,3 +469,6 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>- <Plug>AirlineSelectPrevTab
 nmap <leader>+ <Plug>AirlineSelectNextTab
+
+nmap <space>e <Cmd>CocCommand explorer<CR>
+nmap <space>f <Cmd>Files <CR>

@@ -335,6 +335,17 @@ function install_prepare_software_on_ubuntu()
     else
         compile_vim_on_ubuntu
     fi
+
+    # install the Searcher-ag
+    sudo apt-get install silversearcher-ag
+    # install Rg
+    sudo apt-get install ripgrep
+
+    # install nodejs
+    curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -x 
+    sudo apt update
+    sudo apt install nodejs npm 
+    sudo npm install -g yarn 
 }
 
 # 安装ubuntu系必备软件
@@ -482,7 +493,13 @@ function install_fonts_on_linux()
 function install_vim_plugin()
 {
     vim -c "PlugInstall" -c "q" -c "q"
+    cd ~/.vim/plugged/coc.nvim
+    yarn install 
+    yarn build
+    vim -c "CocInstall coc-explorer"
+
 }
+
 
 # 安装ycm插件
 function install_ycm()
