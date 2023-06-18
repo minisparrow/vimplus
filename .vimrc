@@ -170,17 +170,17 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'vim-scripts/VimCompletesMe'
 Plug 'liuchengxu/vista.vim'
-Plug 'itchyny/lightline.vim'
-
-
+" Plug 'itchyny/lightline.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'windwp/vim-floaterm-repl'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'weirongxu/coc-explorer'
+Plug 'gyim/vim-boxdraw'
+Plug 'kshenoy/vim-signature'
 
 
 " 加载自定义插件
@@ -231,6 +231,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 set background=dark
 let g:onedark_termcolors=256
 colorscheme onedark
+colorscheme industry
+colorscheme elflord
 
 " airline
 let g:airline_theme="onedark"
@@ -472,3 +474,6 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 
 nmap <space>e <Cmd>CocCommand explorer<CR>
 nmap <space>f <Cmd>Files <CR>
+nmap <space>s <Cmd>LspStopServer <CR>
+" nmap <space>p <C-b><p> <CR>
+map <C-b><C-p> <space>p
